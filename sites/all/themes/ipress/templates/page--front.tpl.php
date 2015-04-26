@@ -159,10 +159,11 @@
 							<div class="search">
 								<div class="search_icon"><i class="fa-search"></i></div>
 								<div class="s_form">
-									<form action="search_result.html" id="search" method="get">
-										<input id="inputhead" name="search" type="text" onFocus="if (this.value=='Start Searching...') this.value = '';" onBlur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
-										<button type="submit"><i class="fa-search"></i></button>
-									</form><!-- /form -->
+									<?php
+										if ($page['search_form']):
+											print render($page['search_form']);
+										endif;
+									?><!-- /form -->
 								</div><!-- /s form -->
 							</div><!-- /search -->
 						</div><!-- /right icons -->
