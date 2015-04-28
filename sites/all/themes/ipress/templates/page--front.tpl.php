@@ -175,41 +175,27 @@
 		<div class="page-content">
 			<div class="row clearfix">
 				<div class="grid_9 alpha">
+					<?php
+						if ($page['top_news']):
+					?>
 					<div class="ipress_slider mbf">
 						<div class="slider_a owl-carouseltheme">
-							<!-- /slide -->
-
+							
 							<div class="item clearfix">
-								<div class="half">
-									<div class="slide_details">
-										<a class="cat color4" href="#" title="View all posts under Sports">Sports</a>
-										<span class="post_rating" href="#" title="Rating"><i class="fa fa-star"></i> 9.11</span>
-										<h3><a href="single_post.html">Sed ut perspiciatis unde omnis iste</a></h3>
-									</div>
-									<a href="single_post.html"><img src="images/assets/slider4.jpg" alt=""></a>
-								</div><!-- /half -->
-
-								<div class="half">
-									<div class="slide_details">
-										<a class="cat color5" href="#" title="View all posts under Music">Music</a>
-										<span class="post_rating" href="#" title="Rating"><i class="fa fa-star"></i> 10</span>
-										<h3><a href="single_post.html">Discovered the undoubtable source</a></h3>
-									</div>
-									<a href="single_post.html"><img src="images/assets/slider5.jpg" alt=""></a>
-								</div><!-- /half -->
-
-								<div class="half">
-									<div class="slide_details">
-										<a class="cat color6" href="#" title="View all posts under TV">TV</a>
-										<span class="post_rating" href="#" title="Rating"><i class="fa fa-star"></i> 6.99</span>
-										<h3><a href="single_post.html">The standard chunk of Lorem ipsum</a></h3>
-									</div>
-									<a href="single_post.html"><img src="images/assets/slider6.jpg" alt=""></a>
-								</div><!-- /half -->
+							
+							<?php 
+								print render($page['top_news']);
+							?>
 							</div><!-- /slide -->
 
+							<!-- /slide -->
+
 						</div><!-- /slider -->
-					</div><!-- /slider ipress -->
+					</div>
+							
+					<?php
+						endif;
+					?><!-- /slider ipress -->
 
 					<div class="grid_8 omega posts righter">
 						<div class="post_day mbf clearfix">
