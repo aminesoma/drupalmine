@@ -4,7 +4,18 @@ $out = '';
 //if($block->module=='widget') //remove title
 	//$block->subject='';
 	
-if($block->region == 'content'){
+if ($block->region == 'sidebar_first' or $block->region == 'sidebar_second') { 
+	$out .= '<div class="widget '.$classes.'">';
+		$out .= render($title_suffix);
+		if ($block->subject && !empty($block->subject)):
+			$out .= '<div class="title">';
+				$out .= '<h4>'.$block->subject.'</h4>';
+			$out .= '</div>';
+		endif;
+		$out .= $content;
+	$out .= '</div>';
+	
+}elseif($block->region == 'content'){
 	$out .= '<div class="mbf clearfix '.$classes.'">';
 		$out .= render($title_suffix);
 		if ($block->subject){
